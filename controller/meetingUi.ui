@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1147</width>
+    <height>899</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QGraphicsView" name="graphicsView"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1147</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuoperation">
+    <property name="title">
+     <string>操作</string>
+    </property>
+    <addaction name="actionswitchCamera"/>
+    <addaction name="actiontorch"/>
+    <addaction name="actionrotate"/>
+    <addaction name="actionmove_left"/>
+    <addaction name="actionmove_right"/>
+    <addaction name="actionzoom"/>
+    <addaction name="actionexpension"/>
+    <addaction name="actioncapture"/>
+    <addaction name="actionback"/>
+    <addaction name="actionscreen_shot"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_openImg"/>
+    <addaction name="action_openDir"/>
+    <addaction name="actionconvert"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>视图</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actiondocuments"/>
+    <addaction name="actionreleaseNote"/>
+    <addaction name="actionabout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuoperation"/>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionswitchCamera">
+   <property name="text">
+    <string>显示/隐藏摄像头</string>
+   </property>
+  </action>
+  <action name="action_openDir">
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="action_openImg">
+   <property name="text">
+    <string>打开文件（.pptx）</string>
+   </property>
+  </action>
+  <action name="actiontorch">
+   <property name="text">
+    <string>确认</string>
+   </property>
+  </action>
+  <action name="actionrotate">
+   <property name="text">
+    <string>旋转内容</string>
+   </property>
+  </action>
+  <action name="actionmove_left">
+   <property name="text">
+    <string>上一页</string>
+   </property>
+  </action>
+  <action name="actionmove_right">
+   <property name="text">
+    <string>下一页</string>
+   </property>
+  </action>
+  <action name="actionzoom">
+   <property name="text">
+    <string>缩小内容</string>
+   </property>
+  </action>
+  <action name="actionexpension">
+   <property name="text">
+    <string>放大内容</string>
+   </property>
+  </action>
+  <action name="actioncapture">
+   <property name="text">
+    <string>提取内容</string>
+   </property>
+  </action>
+  <action name="actionback">
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </action>
+  <action name="actionscreen_shot">
+   <property name="text">
+    <string>截屏</string>
+   </property>
+  </action>
+  <action name="actionconvert">
+   <property name="text">
+    <string>格式转换</string>
+   </property>
+  </action>
+  <action name="actiondocuments">
+   <property name="text">
+    <string>文档</string>
+   </property>
+  </action>
+  <action name="actionreleaseNote">
+   <property name="text">
+    <string>开发笔记</string>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action_openDir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openDir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_openImg</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actiontorch</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>torch()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionrotate</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rotate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionmove_left</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>move_left()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionzoom</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>zoom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actioncapture</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>capture()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionback</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>back()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionexpension</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>expension()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionmove_right</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>move_right()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionscreen_shot</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>screen_shot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionswitchCamera</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>switch_camera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>435</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionconvert</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>convert_form()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>573</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openDir()</slot>
+  <slot>openImg()</slot>
+  <slot>torch()</slot>
+  <slot>rotate()</slot>
+  <slot>move_left()</slot>
+  <slot>move_right()</slot>
+  <slot>zoom()</slot>
+  <slot>expension()</slot>
+  <slot>capture()</slot>
+  <slot>back()</slot>
+  <slot>screen_shot()</slot>
+  <slot>switch_camera()</slot>
+  <slot>convert_form()</slot>
+ </slots>
+</ui>
